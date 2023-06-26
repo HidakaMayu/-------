@@ -45,15 +45,14 @@ public class Shop : MonoBehaviour
         {
             uiBtn.name = i;
 
-
         }
         
     }
 
         void ShopA()
     {
-        //ShopA = true
-        //if getButtondown = そのボタン削除＆　tapbuttonのname Listから削除
+        //ShopA = true　List並べる
+        //横に値段もかく
     }
 
     void ShopB()
