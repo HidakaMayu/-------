@@ -8,14 +8,11 @@ public class Shop : MonoBehaviour
     //int money = 1000;
     List<string> shopAItem = new List<string>() { "やくそう","どくけしそう","せいすい" };
     List<string> shopBItem = new List<string>(){ "つるぎ","よろい" };
+    Dictionary<string, int> nowItems = new Dictionary<string, int>(); //所持品
 
     [SerializeField] GameObject btn;//表示されるボタン
     [SerializeField] object parent;
 
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -34,8 +31,9 @@ public class Shop : MonoBehaviour
 
     }
     //shopA 陳列。買われてたら表示しない✖　List内存在してるのをボタン化
+    //調べていいのか否か...私の調方はよくないため
 
-    public void InstantiateUIBtn(GameObject parent, string name, float pos_x, float pos_y)
+    public void LoadBtn(GameObject parent, string name, float pos_x, float pos_y)　//ボタンを並べる処理
     {
         GameObject uiBtn = Instantiate(this.btn, new Vector3(pos_x, pos_y, 0), Quaternion.identity);
         int a = 0;
@@ -49,33 +47,22 @@ public class Shop : MonoBehaviour
         
     }
 
-        void ShopA()
+    void Shops()
     {
-        //ShopA = true　List並べる
-        //横に値段もかく
-    }
+        /*ShopA = true　List並べる
+        横に値段もかく
+        並べるInstantiateUIBtn(GameObject parent, string name, float pos_x, float pos_y)
 
-    void ShopB()
-    {
-        //if(GetBttonDown(backButton))
-        {
-            GameObject shopB = new GameObject();
-            Back(shopB);
-        }
-    }
-
-    void Item()
-    {
-
-    }
-
-    static void Back(GameObject nowScene)//コールバック関数
-    {
-        /*if(back)
+        if(GetBttonDown(backButton))
         {
             firstscene = true
             nowScene = false
         }*/
-        
     }
+
+    void Items()
+    {
+
+    }
+
 }
