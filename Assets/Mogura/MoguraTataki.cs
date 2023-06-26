@@ -12,7 +12,6 @@ public class MoguraTataki : MonoBehaviour
         
     private void Awake()
     {
-        
         orgPos = this.transform.position;
     }
 
