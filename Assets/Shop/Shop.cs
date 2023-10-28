@@ -42,7 +42,7 @@ public class Shop : MonoBehaviour
         foreach (var i in num)
         {
             uiBtn.name = i;
-
+            
         }
         
     }
